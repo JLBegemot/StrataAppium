@@ -6,10 +6,10 @@ import io.appium.java_client.remote.AndroidMobileCapabilityType;
 import io.appium.java_client.remote.MobileCapabilityType;
 import org.junit.After;
 import org.junit.Before;
+import org.junit.Test;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import java.net.MalformedURLException;
 import java.net.URL;
-
 public class FirstTest {
 
     private AppiumDriver<MobileElement> driver;
@@ -23,7 +23,7 @@ public class FirstTest {
         caps.setCapability(MobileCapabilityType.AUTOMATION_NAME, "UiAutomator2");
         caps.setCapability(AndroidMobileCapabilityType.APP_PACKAGE, "org.wikipedia");
         caps.setCapability(AndroidMobileCapabilityType.APP_ACTIVITY, "org.wikipedia.main.MainActivity");
-        caps.setCapability(MobileCapabilityType.APP, "");
+        caps.setCapability(MobileCapabilityType.APP, "/Users/lynevivan/IdeaProjects/StrataAppium/src/test/resources/Apps/wikipedia.apk");
         //Сюда надо прописать полный путь до APK файла, лежащего в папке APKs
 
         URL appiumURL = new URL("http://127.0.0.1:4723/wd/hub");
@@ -34,5 +34,10 @@ public class FirstTest {
     @After
     public void  tearDown() {
         driver.quit();
+    }
+
+    @Test
+    public void firstTest() {
+
     }
 }

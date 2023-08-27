@@ -17,4 +17,6 @@ dependencies {
     compile group: 'io.qameta.allure', name: 'allure-testng', version: '2.13.1'
     compile group: 'ru.yandex.qatools.allure', name: 'allure-testng-adaptor', version: '1.5.4'
     testImplementation 'org.junit.jupiter:junit-jupiter:5.8.1'
+    testImplementation group: 'org.junit.platform', name: 'junit-platform-runner', version: '1.10.0'
+
 }
